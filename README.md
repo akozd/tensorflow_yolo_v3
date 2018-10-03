@@ -20,18 +20,19 @@ Quick Start
 ===========
 Dependencies
 ------------
-The test environment is
+The test environment is:
 - Python 3.6.3
 - tensorflow 1.10.1
 - numpy 1.14.5
 - cv2 3.4.0
+
 Please make sure to have all of these dependencies installed before using.
 Follow these links if you are struggling with installing these dependencies:
--https://www.python.org/downloads/
--https://pip.pypa.io/en/stable/installing/ 
--https://www.tensorflow.org/install/
--https://www.scipy.org/install.html
--https://pypi.org/project/opencv-python/
+- https://www.python.org/downloads/
+- https://pip.pypa.io/en/stable/installing/ 
+- https://www.tensorflow.org/install/
+- https://www.scipy.org/install.html
+- https://pypi.org/project/opencv-python/
 
 Setup
 -----
