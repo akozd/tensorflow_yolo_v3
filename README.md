@@ -1,4 +1,4 @@
-# tensorflow_yolov3
+# tensorflow_yolo_v3
 A well-documented TensorFlow implementation of the YOLOv3 model.
 
 Introduction
