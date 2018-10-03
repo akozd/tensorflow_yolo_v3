@@ -27,22 +27,24 @@ The test environment is
 - cv2 3.4.0
 Please make sure to have all of these dependencies installed before using.
 Follow these links if you are struggling with installing these dependencies:
-https://www.python.org/downloads/
-https://pip.pypa.io/en/stable/installing/ 
-https://www.tensorflow.org/install/
-https://www.scipy.org/install.html
-https://pypi.org/project/opencv-python/
+-https://www.python.org/downloads/
+-https://pip.pypa.io/en/stable/installing/ 
+-https://www.tensorflow.org/install/
+-https://www.scipy.org/install.html
+-https://pypi.org/project/opencv-python/
 
 Setup
 -----
 1. Open up terminal and cd into the root directory of this repository.
 2. Enter `model_weights/get_pretrained_coco_weights.sh` into the terminal, which will download the weights pretrained on the COCO dataset for use with YOLOv3. Alternatively if you are not using a MacBook, you can download the weights manually from [this link](https://www.dropbox.com/s/hgi354dajhc9yso/coco_pretrained_weights.zip), unzip them, and place them in the 'model_weights' directory. Make sure that the 'model_weights' directory looks like this:
+```
 .
 +-- _model_weights
 |   +-- coco_pretrained_weights.ckpt.data-00000-of-00001
 |   +-- coco_pretrained_weights.ckpt.index
 |   +-- coco_pretrained_weights.ckpt.meta
 |   +-- get_pretrained_coco_weights.sh
+```
 
 With the pretrained weights downloaded, `detect.py` and `train.py` are now ready to use.
 
@@ -67,7 +69,10 @@ Train the YOLOv3 Model on a New Dataset Using 'train.py'
 ========================================================
 `train.py` trains the YOLOv3 model on a custom dataset. This means that YOLOv3 can be trained to identify almost any kind of object as long as the right dataset is provided. 
 
+Usage
+-----
 To begin training on a custom dataset, follow these steps:
+
 1. With your open terminal cd to the repository's root directory.
 2. Make sure that the `training_data` directory is updated to include your dataset. Consult the current example setup to see how the dataset should be stored and prepared.
 3. Enter `python train.py --train_from_chekpoint=model_weights/coco_pretrained_weights.ckpt` into the terminal to begin training the model from the pretrained coco weights (recommended). You can also simply enter `python train.py` to train the model from scratch with randomly initialized weights (not recommended). 
@@ -78,23 +83,21 @@ Inspect the YOLOv3 Model Architecture with TensorBoard
 ======================================================
 TensorBoard is a powerful tool for visualizing machine learning models. Everytime `detect.py` or `train.py` is run, TensorBoard event files will be saved with the latest graph data. 
 
+Usage
+-----
 To access the event file generated during dectection, follow these steps:
+
 1. With your open terminal cd to the repository's root directory.
 2. Enter `tensorboard --logdir=tensorboard/tensorboard_detect/` into the terminal.
 3. When a popup displaying the warning: "Do you want the application “python3.6” to accept incoming network connections?" shows up, click "accept".
 4. Open up a web browser and copy and paste the link in the terminal into your web browser.
 
-You should be able to explore a graph that looks like this:
-![detect graph](yolo_v3_detect_graph.png "detect graph")
-
 To access the event file generated during training, follow these steps:
+
 1. With your open terminal cd to the repository's root directory.
 2. Enter `tensorboard --logdir=tensorboard/tensorboard_train/` into the terminal.
 3. When a popup displaying the warning: "Do you want the application “python3.6” to accept incoming network connections?" shows up, click "accept".
 4. Open up a web browser and copy and paste the link in the terminal into your web browser.
-
-You should be able to explore a graph that looks like this:
-![train graph](yolo_v3_train_graph.png "train graph")
 
 Important Information
 =====================
