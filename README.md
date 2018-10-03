@@ -62,9 +62,9 @@ Usage
 To perform object detection on an image, follow these steps:
 
 1. With your open terminal cd to the repository's root directory.
-2. Enter `python detect.py --path_to_input_image=path/to/your/image.jpg` into the terminal. You can also identically recreate the example output by typing in `python detect.py --path_to_input_image=training_data/images/img1.jpg` to get a better feeling for how the program works.
+2. Enter `python detect.py --path_to_input_image=path/to/your/image.jpg` into the terminal. 
 
-It's as simple as that. Typing in `python detect.py --help` will give you a full rundown of the options available to you, of which include being able to load a different set of pretrained weights and changing the save name of the output image.
+It's as simple as that. You can also identically recreate the example output by typing in `python detect.py --path_to_input_image=training_data/images/img1.jpg` to get a better feeling for how the program works. Typing in `python detect.py --help` will give you a full rundown of the options available to you, of which include being able to load a different set of pretrained weights and changing the save name of the output image.
 
 Train the YOLOv3 Model on a New Dataset Using 'train.py'
 ========================================================
